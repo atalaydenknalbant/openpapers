@@ -112,6 +112,12 @@ h6 {
   padding: 0;
 }
 
+.main-head{
+  background-color: #d3d9df;
+
+
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
