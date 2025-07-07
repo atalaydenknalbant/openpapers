@@ -10,7 +10,8 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass")(require("sass"));
+
+
 const uglify = require("gulp-uglify");
 
 // Load package.json for banner
@@ -74,13 +75,8 @@ function modules() {
 // CSS task
 function css() {
   return gulp
-    .src("./scss/**/*.scss")
+    .src(["./css/*.css", "!./css/*.min.css"]) 
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: "expanded",
-      includePaths: "./node_modules",
-    }))
-    .on("error", sass.logError)
     .pipe(autoprefixer({
       cascade: false
     }))
@@ -114,7 +110,7 @@ function js() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./scss/**/*", css);
+  gulp.watch(["./css/*.css", "!./css/*.min.css"], css);
   gulp.watch("./js/**/*", js);
   gulp.watch("./**/*.html", browserSyncReload);
 }
