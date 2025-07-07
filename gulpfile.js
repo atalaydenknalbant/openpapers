@@ -92,8 +92,7 @@ function css() {
       suffix: ".min"
     }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./css"))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest("./css"));
 }
 
 // JS task
@@ -110,8 +109,7 @@ function js() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./js'));
 }
 
 // Watch files
@@ -123,7 +121,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
