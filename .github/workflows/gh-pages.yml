@@ -23,8 +23,6 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-        env:
-          NODE_ENV: development
       - run: npx gulp build
       - uses: actions/upload-pages-artifact@v3
         with:
