@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OPENPAPERS - Document</title>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body id="page-top">
+<div w3-include-html="../components/navbar.html"></div>
+<header class="masthead d-flex">
+    <div class="container text-center my-auto text-white">
+        <h1 id="paper-title" class="mb-1"></h1>
+    </div>
+</header>
+<div class="container-fluid">
+    <img class="line" src="" alt="">
+</div>
+<h1 class="text-center my-auto text-dark">Summary</h1>
+<div id="paper-summary" class="container my-auto text-dark"></div>
+<div class="container text-center">
+    <h1 class="text-center my-auto text-dark">Document</h1>
+    <p></p>
+    <img id="paper-image" class="img-fluid" width="1280" height="720" src="" alt="">
+    <p></p>
+    <a id="paper-download" download><button class="btn-dark">Download Document as PDF</button></a>
+</div>
+<a class="scroll-to-top rounded js-scroll-trigger" href="index.html">
+    <i class="fas fa-home"></i>
+</a>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/papers.js"></script>
+<script>
+    w3IncludeHTML();
+    renderDynamicPaper();
+</script>
+</body>
+</html>
