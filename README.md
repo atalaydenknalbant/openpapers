@@ -4,4 +4,8 @@
 The website for a project
 
 ## Usage
-open terminal run `npm install` and then run `npm start` to see the website 
+Open terminal, run `npm install` and then `npm start` to see the website locally.
+
+## Deployment
+The site is automatically built and published to **GitHub Pages** via
+[GitHub Actions](.github/workflows/gh-pages.yml).
