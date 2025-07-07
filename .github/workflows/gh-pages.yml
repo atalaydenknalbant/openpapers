@@ -25,7 +25,6 @@ jobs:
       - run: npm ci
         env:
           NODE_ENV: development
-      - run: npm install sass --no-save
       - run: npx gulp build
       - uses: actions/upload-pages-artifact@v3
         with:
