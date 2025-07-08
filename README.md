@@ -1,5 +1,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/atalaydenknalbant/openpapers)
 
+## :warning: Heads-up
+The GitHub Pages demo omits some client side features such as adding new papers. Run the project locally for the full experience.
+
 # OpenPapers
 
 OpenPapers is a small front‑end project that showcases historical documents such as treaties and agreements. Visitors can read existing documents or add new ones through a simple form. All data is stored in the browser so everyone can create their own collection when running the site locally or via GitHub Pages.
@@ -12,6 +15,9 @@ OpenPapers is a small front‑end project that showcases historical documents su
 - **Home page** lists built‑in papers and those added through the form
 - **Gulp build system** that minifies CSS and JavaScript
 - **GitHub Actions** workflow builds the site with Node 20 and deploys it to GitHub Pages
+
+
+
 
 ## Usage
 
