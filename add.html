@@ -72,8 +72,9 @@
       signers:this.signers.value,
       location:this.location.value
     };
-    const id=addPaper(data);
-    window.location.href='paper.html?id='+id;
+    addPaper(data).then(id=>{
+      window.location.href='paper.html?id='+id;
+    });
   });
 </script>
 </body>
