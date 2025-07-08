@@ -36,6 +36,14 @@
       <label for="pdf">PDF URL</label>
       <input id="pdf" name="pdf" class="form-control" required>
     </div>
+    <div class="form-group mb-3">
+      <label for="signers">Signers</label>
+      <input id="signers" name="signers" class="form-control" required>
+    </div>
+    <div class="form-group mb-3">
+      <label for="location">Location</label>
+      <input id="location" name="location" class="form-control" required>
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
@@ -55,7 +63,9 @@
       title:this.title.value,
       summary:this.summary.value,
       image:this.image.value,
-      pdf:this.pdf.value
+      pdf:this.pdf.value,
+      signers:this.signers.value,
+      location:this.location.value
     };
     const id=addPaper(data);
     window.location.href='paper.html?id='+id;

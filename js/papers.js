@@ -46,6 +46,10 @@
     if(!paper) return;
     document.getElementById('paper-title').textContent = paper.title;
     document.getElementById('paper-summary').innerHTML = `<p>${paper.summary}</p>`;
+    const loc = document.getElementById('paper-location');
+    if(loc){ loc.textContent = paper.location || ''; }
+    const sign = document.getElementById('paper-signers');
+    if(sign){ sign.textContent = paper.signers || ''; }
     const img = document.getElementById('paper-image');
     if(img){ img.src = paper.image; }
     const link = document.getElementById('paper-download');
