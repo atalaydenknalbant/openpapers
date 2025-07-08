@@ -48,6 +48,8 @@
     document.getElementById('paper-summary').innerHTML = `<p>${paper.summary}</p>`;
     const loc = document.getElementById('paper-location');
     if(loc){ loc.textContent = paper.location || ''; }
+    const dateEl = document.getElementById('paper-date');
+    if(dateEl){ dateEl.textContent = paper.date || ''; }
     const sign = document.getElementById('paper-signers');
     if(sign){ sign.textContent = paper.signers || ''; }
     const img = document.getElementById('paper-image');
