@@ -1,10 +1,9 @@
 "use strict";
 
 // Load plugins
-const autoprefixer = require("gulp-autoprefixer");
 const browsersync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
-const del = require("del");
+const {deleteAsync} = require("del");
 const gulp = require("gulp");
 const header = require("gulp-header");
 const merge = require("merge-stream");
@@ -39,7 +38,7 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(["./vendor/"]);
+  return deleteAsync(["./vendor/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
@@ -75,9 +74,6 @@ function css() {
   return gulp
     .src(["./css/*.css", "!./css/*.min.css"]) 
     .pipe(plumber())
-    .pipe(autoprefixer({
-      cascade: false
-    }))
     .pipe(header(banner, {
       pkg: pkg
     }))
@@ -114,15 +110,13 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, css, js);
+const build = gulp.series(css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.js = js;
 exports.clean = clean;
-exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

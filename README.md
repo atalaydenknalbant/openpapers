@@ -4,7 +4,7 @@
 The website for a project
 
 ## Usage
-Open terminal, run `npm install` and then execute `gulp watch` to see the website locally.
+Open terminal, run `npm install` and then execute `npm start` to see the website locally.
 Run `npx gulp build` anytime to regenerate the minified CSS and JavaScript assets.
 
 ## Deployment
