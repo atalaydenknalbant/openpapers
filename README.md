@@ -5,7 +5,8 @@ The GitHub Pages demo omits some client side features such as adding new papers.
 
 # OpenPapers
 
-OpenPapers is a small front‑end project that showcases historical documents such as treaties and agreements. Visitors can read existing documents or add new ones through a simple form. All data is stored in the browser so everyone can create their own collection when running the site locally or via GitHub Pages.
+World wide web includes everything, but some papers are hidden from society or hard to reach. With OPENPAPERS we will encourage authorities to share treaties, white papers, and other papers on our
+website as open-source, completely free and transparent. We will also summarize long papers to make the public understand papers more clearly.
 
 ## Features
 
