@@ -17,7 +17,7 @@ OpenPapers is a small front‑end project that showcases historical documents su
 
 1. Clone the repository
 2. Install dependencies with `npm install`
-3. Run `npm start` to launch a local development server with BrowserSync
+3. Run `gulp watch` to launch a local development server with BrowserSync
 4. Use `npx gulp build` to regenerate the minified assets
 
 Documents added through `add.html` are stored in your browser and will appear on the home page the next time you load the site from the same machine.
@@ -40,7 +40,7 @@ Documents added through `add.html` are stored in your browser and will appear on
 The project uses only client‑side storage and does not have a back end. All new documents live in the browser where they were created. To start a live development server that watches for file changes, run:
 
 ```
-npm start
+gulp watch
 ```
 
 This invokes the `gulp watch` task defined in `package.json`. When you are ready to deploy or commit your changes, run the build step:
@@ -50,16 +50,3 @@ npx gulp build
 ```
 
 The build step copies vendor assets from `node_modules`, minifies CSS and JavaScript, and places the results in the `vendor` and `css/js` directories.
-
-## Deployment
-
-Deployments are handled through [GitHub Actions](.github/workflows/gh-pages.yml). Every push triggers the workflow which installs Node 20, runs the build, and publishes the contents of the repository to the `gh-pages` branch so that the site is available through GitHub Pages.
-
-## Contributing
-
-Feel free to fork the repository and open pull requests. Because the project is entirely front end, contributions are generally limited to HTML, CSS, and JavaScript. Bug reports and suggestions are welcome in the issue tracker.
-
-## GitHub Description
-
-> A minimal site for sharing and archiving important documents. Add new papers through the built‑in form and view them instantly on GitHub Pages.
-
