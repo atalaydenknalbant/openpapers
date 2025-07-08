@@ -2,8 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "*" ]
-  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -26,12 +25,11 @@ jobs:
       - run: npm ci
         env:
           NODE_ENV: development
-      - run: npm install sass --no-save  
+      - run: npm install sass --no-save
       - run: npx gulp build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
   deploy:
     needs: build
     runs-on: ubuntu-latest

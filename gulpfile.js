@@ -10,7 +10,7 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -96,7 +96,7 @@ function js() {
       './js/*.js',
       '!./js/*.min.js'
     ])
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(header(banner, {
       pkg: pkg
     }))
